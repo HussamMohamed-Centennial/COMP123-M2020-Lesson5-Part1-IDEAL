@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace COMP123_M2020_Lesson5_Part1_IDEAL
 {
-    class Program
+    struct Vector2D
     {
-        static void Main(string[] args)
-        {
-
-        }
+        public float x;
+        public float y;
     }
 }
