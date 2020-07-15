@@ -12,6 +12,7 @@ namespace COMP123_M2020_Lesson5_Part1_IDEAL
         {
             //GameObject player=new GameObject("Player");
             Player player=new Player();
+            float playerSpeed = 20.0f; //20 units
             Enemy greenEnemy = new Enemy("GreenEnemy");
             Enemy redEnemy = new Enemy("RedEnemy");
             BossEnemy bossEnemy = new BossEnemy();
@@ -19,21 +20,28 @@ namespace COMP123_M2020_Lesson5_Part1_IDEAL
              //player.Transform.postion = new Vector2D();
 
              player.RaiseSheild();
-             player.Transform.postion=new Vector2D(100.0f , 100.0f);
+             player.Transform.postion = new Vector2D(100.0f , 100.0f);
              Console.WriteLine(player.ToString());
 
-            
-             greenEnemy.FireBullet();
-             greenEnemy.Transform.postion=new Vector2D(60.0f,80.0f);
-             Console.WriteLine(greenEnemy.ToString());
 
-             redEnemy.FireBullet();
-             redEnemy.Transform.postion=new Vector2D();
-             Console.WriteLine(redEnemy.ToString());
+             player.Transform.postion += Vector2D.Up() * playerSpeed;
+             Console.WriteLine(player.ToString());
 
-            bossEnemy.FireBullet();
-            bossEnemy.Transform.postion = new Vector2D(200.0f ,200.0f);
-            Console.WriteLine(bossEnemy.ToString());
+
+
+
+
+            // greenEnemy.FireBullet();
+            // greenEnemy.Transform.postion=new Vector2D(60.0f,80.0f);
+            // Console.WriteLine(greenEnemy.ToString());
+
+            // redEnemy.FireBullet();
+            // redEnemy.Transform.postion=new Vector2D();
+            // Console.WriteLine(redEnemy.ToString());
+
+            //bossEnemy.FireBullet();
+            //bossEnemy.Transform.postion = new Vector2D(200.0f ,200.0f);
+            //Console.WriteLine(bossEnemy.ToString());
 
             //listen for any key
             Console.ReadLine();
