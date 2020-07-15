@@ -31,12 +31,23 @@ namespace COMP123_M2020_Lesson5_Part1_IDEAL
         public GameObject(string name)
         {
             Name = name;
+
+            m_initialize();
         }
 
         // PRIVATE METHODS 
-
+        private void m_initialize()
+        {
+            Transform = new Transform();
+        }
 
         // PUBLIC METHODS 
-
+        public override string ToString()
+        {
+            string outputString = "";
+            outputString += $"Name    : {Name}\n";
+            outputString += Transform.ToString();
+            return outputString;
+        }
     }
 }
