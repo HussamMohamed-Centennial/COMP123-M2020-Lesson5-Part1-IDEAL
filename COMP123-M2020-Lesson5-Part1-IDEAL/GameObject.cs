@@ -11,6 +11,7 @@ namespace COMP123_M2020_Lesson5_Part1_IDEAL
     {
         // PRIVATE INSTANCE MEMBERS 
         private string m_name;
+        private float m_health;
 
         // PUBLIC PROPERTIES
         public Transform Transform { get; set; }
@@ -27,10 +28,29 @@ namespace COMP123_M2020_Lesson5_Part1_IDEAL
             }
         }
 
+        public float Health
+        {
+            get
+            {
+                return m_health;
+            }
+            set
+            {
+                m_health = value;
+
+            }
+        }
+
         // CONSTRUCTOR(S)
-        public GameObject(string name)
+        /// <summary>
+        /// This constructor require a name for game object with an optional health value, by default all game objects has 100.0 health
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="health"></param>
+        public GameObject(string name , float health = 100.0f)
         {
             Name = name;
+            Health = health;
 
             m_initialize();
         }
@@ -46,6 +66,7 @@ namespace COMP123_M2020_Lesson5_Part1_IDEAL
         {
             string outputString = "";
             outputString += $"Name    : {Name}\n";
+            outputString += $"Health  : {Health}\n";
             outputString += Transform.ToString();
             return outputString;
         }

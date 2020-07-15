@@ -26,8 +26,17 @@ namespace COMP123_M2020_Lesson5_Part1_IDEAL
 
              player.Transform.postion += Vector2D.Up() * playerSpeed;
              Console.WriteLine(player.ToString());
+             
+             Vector2D vectorOne = new Vector2D(0.0f ,3.0f);
+             Vector2D vectorTwo = new Vector2D(4.0f ,10.0f);
+             Console.WriteLine("Value of vector one is: " + vectorOne.ToString());
+             Console.WriteLine("Value of vector two is: " + vectorTwo.ToString());
 
+            float dot = Vector2D.Dot(vectorOne, vectorTwo);
+             Console.WriteLine($"The dot Product is: {dot}");
 
+             float distance = Vector2D.Distance(vectorOne, vectorTwo);
+             Console.WriteLine($"The distance between vectorOne and vectorTwo is:  {distance}");
 
 
 

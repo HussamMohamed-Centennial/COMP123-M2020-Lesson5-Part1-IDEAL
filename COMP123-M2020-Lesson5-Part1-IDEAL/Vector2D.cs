@@ -99,5 +99,18 @@ namespace COMP123_M2020_Lesson5_Part1_IDEAL
             return new Vector2D(-1.0f, 0.0f);
         }
 
+        public static float Dot(Vector2D lhs, Vector2D rhs)
+        {
+            return (lhs.x * rhs.x) + (lhs.y * rhs.y);
+        }
+
+        public static float Distance(Vector2D lhs, Vector2D rhs)
+        {
+            float diffxs = rhs.x - lhs.x;
+            float diffys = rhs.y - lhs.y;
+
+            return Convert.ToSingle(Math.Sqrt(diffxs * diffxs + diffys * diffys)) ;
+        }
+
     }
 }
